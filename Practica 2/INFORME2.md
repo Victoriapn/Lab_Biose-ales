@@ -22,4 +22,35 @@ El resto de clases presentes (visibles en la Tabla 1 y el gráfico de barras gen
                     |9	    |AVRT	   |   8	              |    0.08|
                     |10	    |SAAWR	   |   7	              |    0.07|
 
-![alt text](image.png)
+![alt text](image.png) Figura 1.(Distribución de los registros de ECG según el tipo de ritmo.)
+
+2. Visualización y caracterización de las señales
+
+Para esta etapa se seleccionaron dos tipos de ritmo: fibrilación auricular (AFIB) y taquicardia sinusal (ST). La base de datos contiene 1780 registros clasificados como AFIB y 1568 registros clasificados como ST.
+
+La fibrilación auricular es una arritmia caracterizada por una actividad auricular desorganizada. En el electrocardiograma suele observarse una respuesta ventricular irregular y ausencia de ondas P claramente diferenciadas, en su lugar, la línea de base se ve temblorosa o con pequeñas ondas caóticas; Los espacios o intervalos entre cada latido (intervalos R-R) cambian de forma constante y sin ningún patrón predecible y  los picos de los latidos (QRS) suelen mantener una forma normal o estrecha, pero aparecen a distancias completamente desordenadas [1]. Por otra parte, la taquicardia sinusal corresponde a un ritmo originado en el nodo sinusal, con ondas P normales antes de cada QRS, pero con frecuencia cardíaca elevada (>100 lpm) y ritmo regular [2].
+
+Para la visualización se seleccionó un registro de cada grupo y se utilizó la derivación II, debido a que permite observar de manera adecuada la actividad eléctrica cardíaca. Ambos registros contienen 12 derivaciones y aproximadamente 5000 muestras, correspondientes a cerca de 10 segundos de señal.
+
+![alt text](image-1.png) Figura 2. Registro ECG correspondiente a fibrilación auricular (AFIB), derivación II.
+
+![alt text](image-2.png) Figura 3. Registro ECG correspondiente a taquicardia sinusal (ST), derivación II.
+
+A partir de la visualización de los registros seleccionados se pueden identificar diferencias en la morfología, amplitud, frecuencia cardíaca y regularidad de los latidos entre la fibrilación auricular (AFIB) y la taquicardia sinusal (ST). En el registro correspondiente a ST se identifican ondas P consistentes antes de cada complejo QRS, manteniendo la organización característica del ritmo sinusal. En contraste, en el registro de AFIB no se observan ondas P claramente definidas, sino una línea de base con oscilaciones irregulares, mientras que el complejo QRS mantiene una forma relativamente estable.
+
+En cuanto a la amplitud, ambas señales presentan valores del mismo orden de magnitud. Sin embargo, el registro de AFIB presenta una mayor variabilidad entre los diferentes latidos, asociada a las oscilaciones irregulares presentes en la línea de base. Esta variabilidad permite diferenciar visualmente el comportamiento de la señal de AFIB respecto al patrón más organizado observado en ST.
+
+Respecto a la frecuencia cardíaca, el registro de ST presenta una frecuencia cardíaca más alta que el registro de AFIB, lo cual es consistente con las características propias de la taquicardia sinusal, en la que se conserva el ritmo sinusal pero con una frecuencia elevada. Finalmente, se observa una diferencia importante en la regularidad de los latidos. El registro de AFIB presenta una mayor dispersión de los intervalos R-R, reflejada en una desviación estándar de estos intervalos superior a la observada en ST. Esto confirma cuantitativamente el patrón irregular característico de la fibrilación auricular, mientras que los intervalos R-R del registro de ST presentan una menor variabilidad y, por tanto, un ritmo más regular.
+
+En conjunto, las características observadas en las señales permiten diferenciar ambos tipos de ritmo. La ausencia de ondas P claramente definidas y la irregularidad de los intervalos R-R son características destacadas del registro de AFIB, mientras que la presencia de ondas P antes de cada QRS y una mayor regularidad de los intervalos R-R son consistentes con el registro de taquicardia sinusal.
+
+3. Análisis estadístico entre arritmias
+
+
+
+
+
+
+REFERENCIAS 
+[1] “Atrial Fibrillation”. Life in the Fast Lane • LITFL. Accedido el 27 de septiembre de 2026. [En línea]. Disponible: https://litfl.com/atrial-fibrillation-ecg-library/
+[2] “Taquicardia sinusal: qué es y mecanismo | Diccionario CUN,” https://www.cun.es. https://www.cun.es/diccionario-medico/terminos/taquicardia-sinusal
