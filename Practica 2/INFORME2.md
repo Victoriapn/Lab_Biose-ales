@@ -62,14 +62,16 @@ Antes de seleccionar la prueba estadística a implementar, fue indispensable ver
 
 Al confirmarse estadísticamente que los datos no siguen una distribución normal y que las varianzas no son homogéneas, se descartó el uso de la prueba t de Student. En su lugar, el diseño experimental requirió la aplicación de la prueba U de Mann-Whitney, el cual es el método no paramétrico idóneo para comparar diferencias entre dos muestras independientes que no cumplen con los supuestos de normalidad [3].
 
-'''| Variable   | Prueba       | Estadístico | p-valor       | Decisión    |
-                            |------------|--------------|-------------|---------------|-------------|
-                    |0      |Media       | Mann-Whitney |   1297200.0 |  4.269913e-04 | Rechazar H0 |
-                    |1      |Desviacion  | Mann-Whitney |   1049159.0 |  2.301105e-35 | Rechazar H0 |
-                    |2      |Maximo      | Mann-Whitney |   1286645.5 |  9.580237e-05 | Rechazar H0 |
-                    |3      |Minimo      | Mann-Whitney |   1484816.5 |  1.376665e-03 | Rechazar H0 |
-                    |4      |FC          | Mann-Whitney |    744694.5 | 2.829111e-120 | Rechazar H0 |
-                    |5      |RMS         | Mann-Whitney |   1059891.0 |  2.605043e-33 | Rechazar H0 | '''
+```text
+                        | Variable   | Prueba       | Estadístico | p-valor       | Decisión    |
+                        |------------|--------------|-------------|---------------|-------------|
+                |0      |Media       | Mann-Whitney |   1297200.0 |  4.269913e-04 | Rechazar H0 |
+                |1      |Desviacion  | Mann-Whitney |   1049159.0 |  2.301105e-35 | Rechazar H0 |
+                |2      |Maximo      | Mann-Whitney |   1286645.5 |  9.580237e-05 | Rechazar H0 |
+                |3      |Minimo      | Mann-Whitney |   1484816.5 |  1.376665e-03 | Rechazar H0 |
+                |4      |FC          | Mann-Whitney |    744694.5 | 2.829111e-120 | Rechazar H0 |
+                |5      |RMS         | Mann-Whitney |   1059891.0 |  2.605043e-33 | Rechazar H0 |
+```
 
 
 
