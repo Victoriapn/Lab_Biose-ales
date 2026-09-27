@@ -73,7 +73,9 @@ Al confirmarse estadísticamente que los datos no siguen una distribución norma
                 |5      |RMS         | Mann-Whitney |   1059891.0 |  2.605043e-33 | Rechazar H0 |
 ```
 
+Fisiológicamente, estos hallazgos numéricos tienen un sustento clínico claro que valida la correcta extracción de las señales. La diferencia más extrema se observa en la frecuencia cardíaca, donde la prueba arrojó un p-valor tendiente a cero (2.82e-120). En los datos analizados, los pacientes con taquicardia sinusal (ST) presentaron una media de 112.46 latidos por minuto, superior a los 98.23 lpm promediados en los pacientes con AFIB. Esto concuerda perfectamente con la fisiopatología de la taquicardia sinusal, definida como un ritmo cardíaco acelerado que excede los 100 latidos por minuto en adultos, conservando el nodo sinusal como marcapasos [4].
 
+Adicionalmente, el análisis de las métricas de dispersión y energía geométrica de la señal revela diferencias sustanciales en la morfología. La taquicardia sinusal exhibe una mayor variabilidad de amplitud global y energía total en la derivación II, lo cual se refleja en valores de desviación estándar (157.01) y RMS (160.55) estadísticamente superiores a los de la fibrilación auricular (129.02 y 132.40, respectivamente). Esto demuestra que, aunque la AFIB es un ritmo altamente desorganizado y aperiódico en la línea base y en sus intervalos R-R, las contracciones y complejos QRS en este conjunto de datos de taquicardia sinusal mantienen un diferencial de voltaje mucho más marcado y constante. La implementación automatizada de métodos no paramétricos garantizó que esta comparación fuera estadísticamente robusta frente a la alta variabilidad natural de este volumen de registros biomédicos.
 
 
 
@@ -84,3 +86,5 @@ REFERENCIAS
 [2] “Taquicardia sinusal: qué es y mecanismo | Diccionario CUN,” https://www.cun.es. https://www.cun.es/diccionario-medico/terminos/taquicardia-sinusal
 
 [3] R. E. Walpole, R. H. Myers, S. L. Myers, y K. Ye, Probabilidad y estadística para ingeniería y ciencias, 9a ed. México: Pearson Educación, 2012.
+
+[4] A. W. Karch y A. M. Karch, "Tachycardia", en Focus on Nursing Pharmacology, 8a ed., Philadelphia, PA: Wolters Kluwer, 2020.
