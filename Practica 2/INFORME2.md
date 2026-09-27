@@ -1,3 +1,13 @@
+En esta segunda parte de la práctica, trabajamos con una amplia base de datos de señales de electrocardiograma (ECG). El primer paso consistió en realizar una exploración general de los archivos para comprender la estructura de la información suministrada. Para ello, identificamos el número total de registros, los tipos de arritmias disponibles y la cantidad de sujetos por grupo, así como las derivaciones (canales), la frecuencia de muestreo y la duración temporal de los registros.
+
+Posteriormente, seleccionamos dos tipos específicos de arritmias para graficarlas y analizar su comportamiento, observando aspectos como la morfología de la señal, la amplitud y la regularidad de los latidos. A partir de estas señales, realizamos un análisis descriptivo extrayendo variables estadísticas clave para cada paciente: calculamos la media, la desviación estándar, los valores máximos y mínimos, la frecuencia cardíaca (FC) y el valor RMS.
+
+Finalmente, el objetivo principal era realizar un análisis estadístico comparativo riguroso entre ambos grupos de arritmias. Para lograrlo, formulamos una hipótesis nula y una alternativa. Antes de comparar los grupos directamente, debíamos comprobar los supuestos estadísticos para decidir qué prueba aplicar: verificamos la normalidad de las variables (usando la prueba de Shapiro-Wilk) y la homocedasticidad o igualdad de varianzas (mediante la prueba de Levene). La instrucción de la guía era clara: si los datos cumplían con los supuestos, utilizaríamos una prueba paramétrica como la t de Student para muestras independientes; si no los cumplían, debíamos recurrir a un análisis no paramétrico aplicando la prueba U de Mann-Whitney.
+
+
+
+
+
 1. Exploración y descripción de la base de datos
 
 La base de datos utilizada está compuesta por registros electrocardiográficos (ECG) y un archivo de diagnóstico asociado. En total, se encontraron 10646 registros, correspondientes a archivos individuales de ECG. El archivo Diagnostics.xlsx presenta una dimensión de 10646 filas y 16 variables, entre las que se encuentran el tipo de ritmo, características del paciente y diferentes parámetros electrocardiográficos.
