@@ -55,7 +55,12 @@ Respecto a la frecuencia cardíaca, el registro de ST presenta una frecuencia ca
 En conjunto, las características observadas en las señales permiten diferenciar ambos tipos de ritmo. La ausencia de ondas P claramente definidas y la irregularidad de los intervalos R-R son características destacadas del registro de AFIB, mientras que la presencia de ondas P antes de cada QRS y una mayor regularidad de los intervalos R-R son consistentes con el registro de taquicardia sinusal.
 
 3. Análisis estadístico entre arritmias
+   
+Para llevar a cabo el análisis estadístico comparativo entre la fibrilación auricular (AFIB) y la taquicardia sinusal (ST), se definieron inicialmente las hipótesis de trabajo. La hipótesis nula (H0) establece que no existen diferencias significativas en las características descriptivas (media, desviación estándar, valor máximo, valor mínimo, frecuencia cardíaca y valor RMS) entre los dos tipos de arritmias. Por el contrario, la hipótesis alternativa (H1) plantea que sí existen diferencias estadísticamente significativas en dichos parámetros entre ambos grupos.
 
+Antes de seleccionar la prueba estadística a implementar, fue indispensable verificar los supuestos requeridos para el uso de pruebas paramétricas, específicamente la t de Student. Utilizando la prueba de Shapiro-Wilk para evaluar la normalidad de las variables en cada grupo, se obtuvieron p-valores notablemente inferiores a 0.05. De igual manera, se aplicó la prueba de Levene para analizar la homocedasticidad (igualdad de varianzas), la cual arrojó p-valores muy por debajo del nivel de significancia del 5%.
+
+Al confirmarse estadísticamente que los datos no siguen una distribución normal y que las varianzas no son homogéneas, se descartó el uso de la prueba t de Student. En su lugar, el diseño experimental requirió la aplicación de la prueba U de Mann-Whitney, el cual es el método no paramétrico idóneo para comparar diferencias entre dos muestras independientes que no cumplen con los supuestos de normalidad [3].
 
 
 
@@ -65,3 +70,4 @@ En conjunto, las características observadas en las señales permiten diferencia
 REFERENCIAS 
 [1] “Atrial Fibrillation”. Life in the Fast Lane • LITFL. Accedido el 27 de septiembre de 2026. [En línea]. Disponible: https://litfl.com/atrial-fibrillation-ecg-library/
 [2] “Taquicardia sinusal: qué es y mecanismo | Diccionario CUN,” https://www.cun.es. https://www.cun.es/diccionario-medico/terminos/taquicardia-sinusal
+[3] R. E. Walpole, R. H. Myers, S. L. Myers, y K. Ye, Probabilidad y estadística para ingeniería y ciencias, 9a ed. México: Pearson Educación, 2012.
