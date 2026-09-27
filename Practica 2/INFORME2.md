@@ -62,6 +62,15 @@ Antes de seleccionar la prueba estadística a implementar, fue indispensable ver
 
 Al confirmarse estadísticamente que los datos no siguen una distribución normal y que las varianzas no son homogéneas, se descartó el uso de la prueba t de Student. En su lugar, el diseño experimental requirió la aplicación de la prueba U de Mann-Whitney, el cual es el método no paramétrico idóneo para comparar diferencias entre dos muestras independientes que no cumplen con los supuestos de normalidad [3].
 
+| Variable   | Prueba       | Estadístico | p-valor       | Decisión    |
+                        |------------|--------------|-------------|---------------|-------------|
+                |0      |Media       | Mann-Whitney |   1297200.0 |  4.269913e-04 | Rechazar H0 |
+                |1      |Desviacion  | Mann-Whitney |   1049159.0 |  2.301105e-35 | Rechazar H0 |
+                |2      |Maximo      | Mann-Whitney |   1286645.5 |  9.580237e-05 | Rechazar H0 |
+                |3      |Minimo      | Mann-Whitney |   1484816.5 |  1.376665e-03 | Rechazar H0 |
+                |4      |FC          | Mann-Whitney |    744694.5 | 2.829111e-120 | Rechazar H0 |
+                |5      |RMS         | Mann-Whitney |   1059891.0 |  2.605043e-33 | Rechazar H0 |
+
 
 
 
@@ -69,5 +78,7 @@ Al confirmarse estadísticamente que los datos no siguen una distribución norma
 
 REFERENCIAS 
 [1] “Atrial Fibrillation”. Life in the Fast Lane • LITFL. Accedido el 27 de septiembre de 2026. [En línea]. Disponible: https://litfl.com/atrial-fibrillation-ecg-library/
+
 [2] “Taquicardia sinusal: qué es y mecanismo | Diccionario CUN,” https://www.cun.es. https://www.cun.es/diccionario-medico/terminos/taquicardia-sinusal
+
 [3] R. E. Walpole, R. H. Myers, S. L. Myers, y K. Ye, Probabilidad y estadística para ingeniería y ciencias, 9a ed. México: Pearson Educación, 2012.
