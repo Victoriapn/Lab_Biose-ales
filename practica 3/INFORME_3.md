@@ -22,7 +22,7 @@ grafique cada reconstrucción junto con la señal original.
 
 Al revisar las gráficas donde se reconstruye la señal con diferente cantidad de armónicos ($N = 1, 3, 5, 20, 50$), se puede ver cómo va cambiando la figura a medida que se agregan más términos.   En la primera gráfica con $N=1$, la curva sale totalmente redondeada y sube hasta casi $6.4\text{ V}$, pasándose de los $5\text{ V}$ que tiene la onda cuadrada original. Esto pasa porque con un solo término apenas se tiene una onda senoidal simple. Ya cuando se miran las gráficas de $N=3$ y $N=5$, la forma empieza a cuadrarse un poco más, pero todavía le quedan varias curvas y ondulaciones notorias tanto arriba como abajo.   Al poner $N=20$ y luego $N=50$, la parte plana se va pegando mucho mejor a la línea punteada original y las subidas se vuelven casi rectas. 
 
-Sin embargo, se nota un detalle en las esquinas justo donde la señal sube o baja de golpe: la línea roja no da la vuelta limpia en la esquina, sino que se pasa con un pico y hace unas cuantas ondas rápidas antes de emparejarse.   Al consultar sobre el tema, se encuentra que a este efecto se le llama fenómeno de Gibbs. La razón por la que ocurre es matemática: la serie de Fourier intenta formar una figura que tiene esquinas y cortes rectos usando únicamente senos y cosenos, que son curvas suaves [1]. Por eso, en los puntos donde hay un cambio brusco, la suma de esas ondas no logra calzar de forma perfecta [1]. Al revisar la teoría, se menciona que ese pico que se sobrepasa en las esquinas no se quita por más armónicos que se le metan, y suele superar el salto en más o menos un $9\%$ del valor total [1]. Esto concuerda con lo que se obtuvo en la práctica, porque entre $N=20$ y $N=50$ el pico sigue teniendo prácticamente el mismo alto, solo que se ve más pegado al borde. 
+Sin embargo, se nota un detalle en las esquinas justo donde la señal sube o baja de golpe: la línea roja no da la vuelta limpia en la esquina, sino que se pasa con un pico y hace unas cuantas ondas rápidas antes de emparejarse.   Al consultar sobre el tema, se encuentra que a este efecto se le llama fenómeno de Gibbs. La razón por la que ocurre es matemática: la serie de Fourier intenta formar una figura que tiene esquinas y cortes rectos usando únicamente senos y cosenos, que son curvas suaves [1]. Por eso, en los puntos donde hay un cambio brusco, la suma de esas ondas no logra calzar de forma perfecta. Al revisar la teoría, se menciona que ese pico que se sobrepasa en las esquinas no se quita por más armónicos que se le metan, y suele superar el salto en más o menos un $9\%$ del valor total [1]. Esto concuerda con lo que se obtuvo en la práctica, porque entre $N=20$ y $N=50$ el pico sigue teniendo prácticamente el mismo alto, solo que se ve más pegado al borde. 
 
 <img width="976" height="1190" alt="image" src="https://github.com/user-attachments/assets/3ed25d70-c90f-4a13-a86c-0fa0ad6040f2" />
 
@@ -30,7 +30,33 @@ Al analizar los resultados de la reconstrucción para la señal triangular y con
 
 Lo más notorio en estas gráficas es que en ningún momento aparecen las oscilaciones ni los sobrepicos que se daban en las esquinas de la onda cuadrada. Esto se explica al revisar las propiedades de la señal: a diferencia de la cuadrada, la triangular es continua en todo el tiempo, lo que significa que no tiene cortes ni saltos bruscos verticales. Al no haber discontinuidades de nivel, el fenómeno de Gibbs no tiene lugar en este caso [1]. Además, en los libros se indica que los coeficientes de Fourier de la onda triangular disminuyen mucho más rápido (a razón de $1/k^2$), por lo que las altas frecuencias casi no aportan peso y con poquitos términos la suma logra ajustarse fielmente a la forma original sin desbordarse en los picos [1].
 
+k) Cargue una señal ECG sin ruido y su composición espectral. Consulte y describa brevemente los
+componentes de frecuencia principales asociados a las ondas P, al complejo QRS y a la onda T
+
+<img width="1189" height="690" alt="image" src="https://github.com/user-attachments/assets/493c5420-dce7-4c07-9dc7-46c3f7ce4e43" />
+
+Al observar la grafica en el tiempo se aprecian dos latidos completos y el comienzo de un tercero a lo largo de los 3 segundos de registro. En cada ciclo se diferencian claramente las tres deflexiones del electrocardiograma: la onda P con una amplitud moderada cercana a $90\ \mu\text{V}$, el complejo QRS que destaca por ser un pico muy fino y de gran altura que roza los $760\ \mu\text{V}$, y la onda T con una curva más ancha que alcanza cerca de $230\ \mu\text{V}$. Tomando la distancia entre los dos picos R visibles (alrededor de $1.0\text{ s}$ y $2.04\text{ s}$), se obtiene un intervalo de más o menos $1.04\text{ s}$, lo que equivale a un ritmo cardíaco aproximado de $58\text{ latidos por minuto}$ para ese intervalo.
+
+Al comparar las dos gráficas, se nota que la mayor parte de la energía está en la parte baja del espectro, entre 1 y 7 Hz, con el punto más alto cerca de 1.2 Hz. Esto coincide con lo que se ve en la señal de arriba: las ondas P y T no tienen cambios bruscos sino curvas lentas, por lo que aportan frecuencias bajas. Además, ese pico de 1.2 Hz tiene sentido porque se acerca a la frecuencia a la que ocurren los latidos en el registro.
+
+Por otro lado, aunque el complejo QRS dura muy poco dentro de cada ciclo, contiene variaciones de voltaje prácticamente verticales. Esa velocidad y cambio rápido en el tiempo es lo que explica por qué el espectro no cae a cero inmediatamente después de los primeros armónicos, sino que mantiene componentes visibles en frecuencias medias entre $10\text{ Hz}$ y $30\text{ Hz}$. Ya superados los $35\text{ Hz}$, la magnitud se reduce notablemente hasta el fondo, lo cual demuestra que la señal está libre de interferencias comunes como el ruido de la red eléctrica o las vibraciones musculares
+
+### Conclusiones
+
+1. Se pudo comprobar que la forma de la señal en el tiempo define directamente cuántos armónicos se necesitan para reconstruirla: la onda triangular se aproxima casi idéntica con poquitos términos porque sus coeficientes caen muy rápido ($1/k^2$), mientras que la cuadrada necesita muchos más componentes para empezar a verse pareja al decaer más despacio ($1/k$).
+
+2. El fenómeno de Gibbs ocurre únicamente en señales que tienen cortes y saltos instantáneos; en la onda cuadrada genera un pico inevitable en las esquinas que se pasa cerca de un 9% sin importar si se usan 50 o más armónicos, mientras que en la triangular no aparece en ningún momento porque su trazo es continuo.
+
+3. Al pasar la señal de ECG al dominio de la frecuencia se logra entender qué aporta cada parte del latido: las ondas P y T, al ser lentas y suaves, concentran casi toda su energía por debajo de los 10 Hz, mientras que el complejo QRS, por subir y bajar tan rápido, es el que genera los componentes en las frecuencias medias hasta los 30 o 40 Hz.
+
+---
+
+### Referencias
+
+[1] A. V. Oppenheim, A. S. Willsky y S. H. Nawab, *Señales y sistemas*, 2.ª ed. México: Prentice Hall, 1998, pp. 211-220.  
+[2] J. G. Webster, *Medical Instrumentation: Application and Design*, 4.ª ed. Hoboken, NJ, USA: John Wiley & Sons, 2010, pp. 240-248.
 
 
 Bibliografia
 [1] A. V. Oppenheim, A. S. Willsky y S. H. Nawab, Señales y sistemas, 2.ª ed. México: Prentice Hall, 1998, pp. 186-211.
+[2] J. G. Webster, Medical Instrumentation: Application and Design, 4.ª ed. Hoboken, NJ, USA: John Wiley & Sons, 2010, pp. 240-248.
