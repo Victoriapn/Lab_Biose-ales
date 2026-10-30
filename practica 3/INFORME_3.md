@@ -55,8 +55,3 @@ Por otro lado, aunque el complejo QRS dura muy poco dentro de cada ciclo, contie
 
 [1] A. V. Oppenheim, A. S. Willsky y S. H. Nawab, *Señales y sistemas*, 2.ª ed. México: Prentice Hall, 1998, pp. 211-220.  
 [2] J. G. Webster, *Medical Instrumentation: Application and Design*, 4.ª ed. Hoboken, NJ, USA: John Wiley & Sons, 2010, pp. 240-248.
-
-
-Bibliografia
-[1] A. V. Oppenheim, A. S. Willsky y S. H. Nawab, Señales y sistemas, 2.ª ed. México: Prentice Hall, 1998, pp. 186-211.
-[2] J. G. Webster, Medical Instrumentation: Application and Design, 4.ª ed. Hoboken, NJ, USA: John Wiley & Sons, 2010, pp. 240-248.
