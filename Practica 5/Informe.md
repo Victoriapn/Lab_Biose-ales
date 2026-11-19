@@ -14,6 +14,14 @@ Para el punto 4.2, al aplicar la transformada de Fourier a los 10 periodos de la
 
 4.3 Para reconstruir la señal en el dominio del tiempo, se aplicó la transformada inversa de Fourier (np.fft.ifft) sobre los coeficientes obtenidos anteriormente. Al tomar la parte real del resultado y graficarla junto con la señal original, se demostró que ambas ondas se superponen de forma exacta, sin pérdidas de amplitud ni desfases. Esto confirma que la transformación al dominio de la frecuencia conserva toda la información y permite recuperar la señal tal como era al principio.
 
+4.4 ¿Podría decir que las siguientes líneas aplican un filtro? ¿Por qué?
+
+Sí, las líneas de código presentadas aplican un filtro sobre la señal porque seleccionan únicamente una banda específica de frecuencias y eliminan las demás [2]. Al calcular la transformada de Fourier de la señal (Fl = np.fft.fft(x)), los datos pasan al dominio de la frecuencia y quedan ordenados en distintos índices. Después, al crear un arreglo de ceros (F2 = np.zeros((len(Fl)))) y conservar solo los valores ubicados entre los índices 9 y 12 (F2[9:13] = Fl[9:13]), se mantienen las componentes que interesan y se anula por completo el resto del espectro [2].   
+
+En el procesamiento de señales, este procedimiento funciona como un filtro ideal en frecuencia, ya que deja pasar sin cambios el rango escogido y corta de raíz las frecuencias no deseadas [2]. Por último, al aplicar la transformada inversa (np.fft.ifft(F2)), se recupera la señal en el tiempo conteniendo solo la oscilación de esa banda filtrada. Al repetir este mismo proceso en los índices correspondientes a 40, 80 y 160 Hz, se logra separar y reconstruir cada una de las tres ondas sinusoidales que formaban la señal original. 
+
 
 Referencias 
 [1] National Instruments, "Ancho de banda, teorema de muestreo de Nyquist y aliasing," NI, 2026. [En línea]. Disponible en: https://www.ni.com/es/shop/data-acquisition/measurement-fundamentals/analog-fundamentals/acquiring-an-analog-signal--bandwidth--nyquist-sampling-theorem-.html
+
+[2] S. W. Smith, The Scientist and Engineer's Guide to Digital Signal Processing, California Technical Publishing, 1997. [En línea]. Disponible en: https://www.dspguide.com/ch17/1.htm
